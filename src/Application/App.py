@@ -7,3 +7,7 @@ class App:
 
     def api_service(self) -> ApiService:
         return self._api_service
+
+    def run(self) -> int:
+        self._api_service.run()
+        return 0
