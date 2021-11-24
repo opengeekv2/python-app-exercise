@@ -22,6 +22,9 @@ whole JSON in memory. Although that not seems a big problem right now it could b
 with the time and you asked for an implementation that looked a bit ahead.
 
 Also api request and file persistance have been developed in a way they are extensible to
-other endpoints, objects, folder structures and filenames. 
+other endpoints, objects, folder structures and filenames.
 
+Is it possible that the implementation looks a bit "Javish" to you I have still to gest
+used to some Python idioms but it is something that can be learned. Python community
+is full of projects to read and learn the "Pythonic" way of doing things.
 
