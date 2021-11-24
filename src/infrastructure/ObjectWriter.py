@@ -6,7 +6,8 @@ from csv import DictWriter
 
 
 class CsvFileWriter(CsvObjectWriter):
-    def __init__(self, todo_normalizer: ToDoNormalizer, filename_generator: FilenameGenerator,  storage_folder: str):
+    def __init__(self, todo_normalizer: ToDoNormalizer,
+                 filename_generator: FilenameGenerator, storage_folder: str):
         self._todo_normalizer = todo_normalizer
         self._storage_folder = storage_folder
         self._filename_generator = filename_generator
@@ -22,7 +23,7 @@ class CsvFileWriter(CsvObjectWriter):
                     csv_file, fieldnames=fieldnames, dialect='excel')
                 writer.writeheader()
                 writer.writerow(obj_dict)
-        except Exception:
+        except BaseException:
             print("There's been a problem write files.'")
             print('Check the user running this has writing permissions.')
             print(
@@ -31,3 +32,4 @@ class CsvFileWriter(CsvObjectWriter):
             print(
                 'The path can be adjusted setting the STORAGE_FOLDER env var or setting it in the .env file at the .'
             )
+            raise

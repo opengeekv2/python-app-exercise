@@ -1,5 +1,4 @@
-import pytest
-from typing import Dict, Generator
+from typing import Generator
 from unittest.mock import MagicMock, patch
 from src.infrastructure.ListEndpointReader import RequestsChunkedListEndpointReader
 from src.model.todo import ToDo

@@ -24,7 +24,10 @@ class ApiService:
         self._todo_api_reader: ListEndpointReader = todo_api_reader
         self._todo_writer: CsvObjectWriter = todo_writer
 
-    def run(self):
+    def run(self) -> bool:
         print('Running ApiService', file=stderr)
+        looped = False
         for todo in self._todo_api_reader.read_endpoint():
             self._todo_writer.write_object(todo)
+            looped = True
+        return looped

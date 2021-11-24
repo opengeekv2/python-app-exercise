@@ -26,7 +26,8 @@ class RequestsChunkedListEndpointReader(ListEndpointReader):
                         json_chunk += b'}'
                         yield json.load(io.BytesIO(json_chunk), object_hook=self._normalizer.denormalize)
                     json_chunk += line
-        except Exception as ex:
+        except BaseException:
             print('Error connecting or parsing endpoint content.')
             print('You may change the endpoint setting the API_ROOT environment variable or setting it up in the .env file.')
+            raise
         return

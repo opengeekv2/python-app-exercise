@@ -6,5 +6,13 @@ class App:
         self._api_service = api_service
 
     def run(self) -> int:
-        self._api_service.run()
-        return 0
+        try:
+            result = self._api_service.run()
+            if result == True:
+                print("Success")
+                return 0
+            print("Fail")
+            return -1
+        except BaseException:
+            print("Fail")
+            return -1
