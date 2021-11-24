@@ -10,3 +10,8 @@
 
 ## Extra points
 - Use _requests_ library from [PyPI](https://pypi.org/project/requests/)
+
+## Running the app
+This app requires some dependecies to be run.
+Pipenv has been used to manage those depdnecies as it generates a lockfile to ensure all
+transitive dependencies are compatible and that everybody installs the same dependencies.
