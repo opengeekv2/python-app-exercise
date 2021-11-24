@@ -10,6 +10,7 @@ python-dotenv = "*"
 [dev-packages]
 python-app-exercise = {editable = true, path = "."}
 pytest = "6.2.5"
+autopep8 = "*"
 
 [requires]
 python_version = "3.10"
