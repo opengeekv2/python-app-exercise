@@ -16,6 +16,13 @@ This app requires some dependecies to be run.
 Pipenv has been used to manage those depdnecies as it generates a lockfile to ensure all
 transitive dependencies are compatible and that everybody installs the same dependencies.
 
+To run it first install pipenv with pip, get into the virtualenv and run the app:
+```
+pip install pipenv
+pipenv shell
+python main.py
+```
+
 ## Implementation approach
 The download of the json uses is streamed and creates a generator. That avoids loading the
 whole JSON in memory. Although that not seems a big problem right now it could become big
@@ -24,7 +31,7 @@ with the time and you asked for an implementation that looked a bit ahead.
 Also api request and file persistance have been developed in a way they are extensible to
 other endpoints, objects, folder structures and filenames.
 
-It is possible that the implementation looks a bit "Javish" to you I have still to gest
+It is possible that the implementation looks a bit "Javish" to you I have still to get
 used to some Python idioms but it is something that can be learned. Python community
 is full of projects to read and learn the "Pythonic" way of doing things.
 
